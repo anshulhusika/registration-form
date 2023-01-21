@@ -35,21 +35,20 @@ submit = () =>{
     }
     
     console.log(tempUser.email);
-    if (validate != 0 ) {
+    if (validate.length != 0 ) {
         
         console.log("not succes");
         details.classList.remove('none');
         details.classList.remove('details');
         details.classList.add('details2');
-        // details.innerText.remove('details')
         alerts.classList.add('m5');
+        // alerts.classList.remove('m4');
         alerts.innerHTML= 'Enter email is already registered';
        
         setTimeout(()=>{
             
         details.classList.add('none');
         alerts.classList.remove('m5');
-        
         details.classList.remove('details2');
            
       
@@ -76,7 +75,7 @@ submit = () =>{
            
             setTimeout(()=>{
                 details.classList.remove('details');
-                
+                details.classList.remove('details2');
                 details.classList.add('none');
                
             }, 2000)
