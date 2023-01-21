@@ -35,14 +35,14 @@ submit = () =>{
     }
     
     console.log(tempUser.email);
-    if (validate.length != 0 ) {
+    if (validate != 0 ) {
         
         console.log("not succes");
         details.classList.remove('none');
         details.classList.remove('details');
         details.classList.add('details2');
+        // details.innerText.remove('details')
         alerts.classList.add('m5');
-        // alerts.classList.remove('m4');
         alerts.innerHTML= 'Enter email is already registered';
        
         setTimeout(()=>{
@@ -62,6 +62,8 @@ submit = () =>{
             mailList.push(tempUser);
             details.classList.remove('none');
              details.classList.add('details');
+        alerts.innerHTML= 'registered Success full';
+
              let a = document.getElementById('a');
              a.innerHTML= name;
              let b = document.getElementById('b');
@@ -86,12 +88,13 @@ submit = () =>{
             details.classList.remove('none');
             details.classList.add('details2');
             details.classList.remove('details');
+            alerts.classList.add('m5')
 
             alerts.innerHTML= 'You are not eligible';
             console.log("you are not eligible");
             setTimeout(()=>{
                 details.classList.remove('details2');
-                
+                alerts.classList.remove('m5')
                 details.classList.add('none');
                
             }, 2000)
